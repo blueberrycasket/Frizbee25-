@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>FrizBee '25</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/20.png" rel="icon">
+  <link href="assets/img/20.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ropa+Sans:ital,wght@0,400;1,400&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Mobile Responsive CSS -->
+  <style>
+    @media (max-width: 640px) {
+      .intro .gradient-overlay {
+        top: -465px;
+        left: -111px;
+      }
+
+      .cta-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cta-image {
+        max-width: 311px !important;
+        margin: 0 auto;
+      }
+
+      .cta-buttons {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cta-buttons .btn {
+        align-self: center;
+      }
+
+      .featured-speakers {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .speaker-category {
+        background-color: rgba(80, 227, 194, 0) !important;
+        color: rgba(80, 227, 194, 1) !important;
+        border: 1px solid rgba(74, 144, 226, 1) !important;
+      }
+
+      .speaker-category.keynote {
+        background-color: rgba(80, 227, 194, 0) !important;
+        color: rgba(80, 227, 194, 1) !important;
+        border: 1px solid rgba(74, 144, 226, 1) !important;
+      }
+
+      .speaker-category.guest {
+        background-color: rgba(59, 79, 77, 0) !important;
+        color: rgba(80, 227, 194, 1) !important;
+        border: 1px solid rgba(80, 227, 194, 1) !important;
+      }
+
+      .speaker-title {
+        color: rgba(189, 16, 224, 1) !important;
+      }
+
+      .section-title h2 {
+        margin: 0 auto;
+      }
+
+      .carousel-inner {
+        padding-bottom: 4px;
+      }
+
+      .carousel-img {
+        height: 138px !important;
+      }
+    }
+
+    /* Additional responsive and layout updates */
+    .intro-section {
+      margin-bottom: 15px;
+    }
+
+    .intro .row {
+      padding-top: 38px;
+    }
+
+    .intro .content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro .image-wrapper .gradient-overlay {
+      top: -9px;
+      width: 475px;
+    }
+
+    .call-to-action {
+      padding: 100px 20px 40px !important;
+    }
+
+    .cta-heading {
+      box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 1);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    }
+
+    .featured-speakers .container:first-child {
+      margin: 48px auto 50px;
+    }
+
+    .speaker-card .speaker-category {
+      background-color: rgba(59, 79, 77, 0) !important;
+      color: rgba(80, 227, 194, 1) !important;
+      border: 1px solid rgba(80, 227, 194, 1) !important;
+    }
+
+    .speaker-card .speaker-title {
+      color: rgba(189, 16, 224, 1) !important;
+    }
+
+    .third-speaker {
+      margin: 24px auto 0 !important;
+    }
+
+    .speaker-quote {
+      margin-top: 134px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-caption {
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    .carousel-caption h3 {
+      margin: 0 auto;
+    }
+
+    /* Additional mobile responsive updates */
+    @media (max-width: 640px) {
+      .main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .about-heading {
+        align-self: center;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+
+      .call-to-action {
+        padding-bottom: 95px !important;
+        height: 429px !important;
+      }
+
+      .cta-image {
+        max-width: 312px !important;
+      }
+
+      .cta-button {
+        padding: 9px 15px 8px 17px !important;
+      }
+
+      .speaker-image {
+        margin-top: -3px;
+      }
+
+      .speaker-image.noor {
+        margin-top: 4px;
+      }
+
+      .carousel-control-prev {
+        left: 28px !important;
+        top: -372px !important;
+        width: 25px !important;
+      }
+
+      .third-speaker {
+        padding: 0 15px 0 18px !important;
+      }
+    }
+
+    /* Horizontal scroll for event highlights */
+    .highlights-scroll {
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px 0;
+    }
+
+    .highlights-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .highlights-scroll::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+
+    .highlights-scroll::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+    }
+
+    .highlights-scroll::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .highlight-item {
+      display: inline-block;
+      white-space: normal;
+      margin-right: 20px;
+      min-width: 300px;
+      position: relative;
+    }
+
+    .highlight-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .highlight-item {
+        min-width: 250px;
+      }
+    }
+
+    /* Additional styles */
+    .speaker-name {
+      color: #fff !important;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/2.png" alt="FrizBee'25 Logo" style="height: 48px; width: auto; margin-right: 10px;">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="Home" class="active">Home</a></li>
+          <li><a href="About">About</a></li>
+          <li><a href="Registrations">Tickets</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#call-to-action">Buy Tickets</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="background-overlay"></div>
+
+      <div class="hero-content">
+
+        <div class="container">
+
+          <div class="row justify-content-center text-center">
+
+            <div class="col-lg-10">
+
+              <div class="hero-text">
+
+                <!-- Larger logo image -->
+                <img src="assets/img/2.png" alt="FrizBee'25 Logo" class="img-fluid mb-4"
+                  style="max-width: 720px; width: 100%;">
+
+                <!-- Location text moved above date -->
+                <div class="text-center mb-3">
+                  <span class="college-name" style="font-family: 'Ropa Sans', sans-serif; font-weight: 500; color: #ffffff; font-size: 1.1rem;">MES College of Engineering, Kuttipuram</span>
+                </div>
+
+                <!-- Centered event details -->
+                <div class="event-details-wrapper d-flex flex-column align-items-center">
+                  <div class="event-details">
+                    <div class="detail-item">
+                      <i class="bi bi-calendar-event"></i>
+                      <span style="font-family: 'Ropa Sans', sans-serif;">September 12-14, 2025</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="countdown-section">
+
+                <h3 class="countdown-label">Event Starts In</h3>
+
+                <div class="countdown d-flex justify-content-center" data-count="2025/09/12">
+                  <div>
+                    <h3 class="count-days" id="count-days">239</h3>
+                    <h4>Days</h4>
+                  </div>
+                  <div>
+                    <h3 class="count-hours" id="count-hours">8</h3>
+                    <h4>Hours</h4>
+                  </div>
+                  <div>
+                    <h3 class="count-minutes" id="count-minutes">53</h3>
+                    <h4>Minutes</h4>
+                  </div>
+                  <div>
+                    <h3 class="count-seconds" id="count-seconds">23</h3>
+                    <h4>Seconds</h4>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="cta-section">
+
+                <div class="cta-buttons">
+                  <a href="#call-to-action" class="btn btn-primary btn-cta" style="background-color: rgba(189, 16, 224, 1); border-color: rgba(189, 16, 224, 1);">Book your Tickets!</a>
+                </div>
+
+    
+              </div>
+
+            </div><!-- End col-lg-10 -->
+
+          </div><!-- End row -->
+
+        </div><!-- End container -->
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro section intro-section" style="margin-bottom: 15px; background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 90%) 100%);">
+      <div class="container">
+        <div class="row g-4 align-items-center" style="padding-top: 38px;">
+          <div class="col-lg-6">
+            <div class="content" style="display: flex; flex-direction: column;">
+              <h2 style="background-clip: text; margin-bottom: 32px; font: 800 51.2px/61px Rubik, sans-serif;"></h2>
+              <p class="about-heading" style="color: rgb(189, 16, 224); font-size: 40px; font-weight: 800; line-height: 32px; text-indent: 17.6px; align-self: start; margin: 0 auto 40px 0;">
+                About FrizBee'25
+              </p>
+              <p class="about-text" style="color: rgba(230, 230, 247, 0.7); font-size: 17.6px; font-weight: 400; line-height: 32px; margin-bottom: 22px;">Frizbee'25, the annual national level flagship event of IEEE Student Branch of MES College of Engineering Kuttippuram. Frizbee'25 is a celebration of innovation and creativity, bringing together the brightest minds from across the country to showcase their technical and non-technical skills. With a plethora of events, competitions and workshops, this is a one-of-a-kind platform that provides a glimpse into the future of technology. This year, Frizbee'25 promises to be bigger and better than ever before, with a lineup of exciting events.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="visual-section">
+              <div class="image-wrapper position-relative">
+                <img src="assets/img/3.jpg" alt="Tech Summit" class="img-fluid rounded" style="height: 400px; object-fit: cover;">
+                <div class="gradient-overlay" style="top: -9px; width: 475px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Intro Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section" style="padding: 100px 20px 40px; height: 547.2px; display: flex; align-items: center; flex-direction: column; justify-content: space-between; overflow: hidden; position: relative;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <div class="cta-content">
+              <h3 style="font-family: 'Rubik Mono One', sans-serif; margin: auto;"></h3>
+              <h2 class="cta-heading" style="box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 1); text-shadow: 1px 1px 3px rgba(0, 0, 0, 1); font: 500 32px/38px Rubik, sans-serif;">Get your Tickets now!</h2>
+              <p class="mb-4">                                        </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mb-4">
+          <img src="assets/img/earlybird_ticket.png" alt="FrizBee'25 CTA" class="img-fluid cta-image" style="max-width: 500px; margin: auto; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 12px 0px;">
+        </div>
+        <div class="text-center">
+          <a href="https://forms.gle/kxxMT5pJcUtKVjQ17" class="btn btn-primary btn-lg cta-button" style="background-color: rgb(96, 126, 173); border-radius: 50px; color: rgb(255, 255, 255); font-weight: 600; letter-spacing: 0.5px; text-decoration: none; text-transform: uppercase; padding: 14px 32px; border: 1.6px solid rgb(255, 255, 255); margin: auto; text-align: center;">Register Now</a>
+        </div>
+      </div>
+    </section><!-- /Call To Action Section -->
+
+    <!-- Featured Speakers Section -->
+    <section id="featured-speakers" class="featured-speakers section" style="margin-bottom: 32px;">
+
+      <div class="container section-title" style="margin: 48px auto 50px; padding: 0 12px 80px; font: 700 40px/60px Rubik, sans-serif; display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color: rgb(255, 255, 255); text-align: center; width: 100%;">Our Speakers</h2>
+      </div>
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- Featured Speaker 1 -->
+          <div class="col-lg-6">
+            <div class="speaker-card featured">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="speaker-image">
+                    <img src="https://cdn.builder.io/api/v1/image/assets%2F9eeba727b5d5488dadbb59d6335ee1af%2F16411f58d8554d15b1d347835e25f018" alt="Farhan Bin Faizal" class="img-fluid speaker-image">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="speaker-content">
+                    <span class="speaker-category keynote">Keynote Speaker</span>
+                    <h3 class="speaker-name">Farhan Bin Faizal</h3>
+                    <p class="speaker-title" style="color: rgb(255, 255, 255); font-weight: 600;">CEO, Offenso Hackers Academy</p>
+                    <div class="speaker-session">
+                      <h4>Session: Cybersecurity in the Modern Era</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Speaker 2 -->
+          <div class="col-lg-6">
+            <div class="speaker-card featured">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="speaker-image">
+                    <img src="https://cdn.builder.io/api/v1/image/assets%2F9eeba727b5d5488dadbb59d6335ee1af%2Ffa7b3fb2e9e145a08ccba52b6f8551bb" alt="Noor Jaleela" class="img-fluid speaker-image noor">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="speaker-content">
+                    <span class="speaker-category guest">Guest Speaker</span>
+                    <h3 class="speaker-name">Noor Jaleela</h3>
+                    <p class="speaker-title" style="color: rgb(255, 255, 255); font-weight: 600;"><span style="color: rgb(189, 16, 224);">Founder, handlessmade & noozi.production</span><br><span style="color: rgba(189, 16, 224, 1);">Influencer</span></p>
+                    <div class="speaker-session">
+                      <h4>Session: Creativity & Influence </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Speaker 3 -->
+          <div class="col-lg-12 third-speaker" style="margin: 24px auto 0; max-width: 100%; width: 100%; padding: 0 200px;">
+            <div class="speaker-card featured">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="speaker-image">
+                    <img src="https://cdn.builder.io/api/v1/image/assets%2F9eeba727b5d5488dadbb59d6335ee1af%2Fd144af3840c9449dbff1dac42aeaac49" alt="Ar. Mohammed Basim M" class="img-fluid speaker-image noor">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="speaker-content">
+                    <span class="speaker-category guest">Guest Speaker</span>
+                    <h3 class="speaker-name">Ar. Mohammed Basim M</h3>
+                    <p class="speaker-title" style="color: rgb(255, 255, 255); font-weight: 600;">Architect&nbsp;<br>Award Winning Photographer</p>
+                    <div class="speaker-session">
+                      <h4>Session: Designing the future&nbsp;</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quote Section Removed -->
+
+      </div>
+
+    </section><!-- /Featured Speakers Section -->
+
+
+<!-- highlight section with horizontal scroll -->
+<div class="event-highlights-section">
+  <div class="slider-header-wrapper" style="display: flex; flex-direction: column; padding: 30px 0; background-color: rgb(34, 20, 74); margin-bottom: 20px; text-align: center;">
+    <h3 class="slider-heading" style="color: rgb(255, 255, 255); margin: 0 auto 10px; font: 700 32px/38.4px Rubik, sans-serif;">Event Highlights</h3>
+    <div class="pink-line center" style="background-color: rgb(255, 64, 129); border-radius: 2px; height: 4px; width: 60px; margin: 0 auto;"></div>
+  </div>
+
+  <div class="highlights-scroll">
+    <!-- Highlight 1 -->
+    <div class="highlight-item">
+      <img src="./assets/img/highlights/workshops.jpg" alt="Technical Workshops">
+      <div class="highlight-caption">
+        <h3 style="background: rgba(0, 0, 0, 0.5); border-radius: 8px; text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px; padding: 10px 20px; font: 700 24px/28.8px Rubik, sans-serif; color: white; text-align: center; margin: 10px 0;">Technical Workshops</h3>
+      </div>
+    </div>
+
+    <!-- Highlight 2 -->
+    <div class="highlight-item">
+      <img src="./assets/img/highlights/talksessions.jpg" alt="Influencer Talks">
+      <div class="highlight-caption">
+        <h3 style="background: rgba(0, 0, 0, 0.5); border-radius: 8px; text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px; padding: 10px 20px; font: 700 24px/28.8px Rubik, sans-serif; color: white; text-align: center; margin: 10px 0;">Influencer Talks</h3>
+      </div>
+    </div>
+
+    <!-- Highlight 3 -->
+    <div class="highlight-item">
+      <img src="./assets/img/highlights/culturals.jpg" alt="Cultural Programs">
+      <div class="highlight-caption">
+        <h3 style="background: rgba(0, 0, 0, 0.5); border-radius: 8px; text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px; padding: 10px 20px; font: 700 24px/28.8px Rubik, sans-serif; color: white; text-align: center; margin: 10px 0;">Cultural Programs</h3>
+      </div>
+    </div>
+
+    <!-- Highlight 4 -->
+    <div class="highlight-item">
+      <img src="./assets/img/highlights/night.jpg" alt="DJ Party">
+      <div class="highlight-caption">
+        <h3 style="background: rgba(0, 0, 0, 0.5); border-radius: 8px; text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px; padding: 10px 20px; font: 700 24px/28.8px Rubik, sans-serif; color: white; text-align: center; margin: 10px 0;">DJ Party</h3>
+      </div>
+    </div>
+
+    <!-- Highlight 5 -->
+    <div class="highlight-item">
+      <img src="./assets/img/highlights/games.jpg" alt="Games and Activities">
+      <div class="highlight-caption">
+        <h3 style="background: rgba(0, 0, 0, 0.5); border-radius: 8px; text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px; padding: 10px 20px; font: 700 24px/28.8px Rubik, sans-serif; color: white; text-align: center; margin: 10px 0;">Games and Activities</h3>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Workshops Section -->
+<section id="workshops" class="section" style="background: linear-gradient(135deg, #22144a 0%, #2e1e5c 100%); padding: 60px 0;">
+  <div class="container">
+    <div class="section-title text-center mb-5">
+      <h2 style="color: #fff; font: 700 40px/60px Rubik, sans-serif;">Workshops</h2>
+      <div class="pink-line center" style="background-color: rgb(255, 64, 129); border-radius: 2px; height: 4px; width: 60px; margin: 0 auto 16px;"></div>
+    </div>
+    <div class="row gy-4 justify-content-center">
+      <!-- Robotics Workshop -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow" style="background: rgba(34,20,74,0.95); border-radius: 16px; border: none;">
+          <div style="position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; border-radius: 16px 16px 0 0;">
+            <img src="assets/img/workshops/robotics.jpg" alt="Robotics Workshop" class="card-img-top" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" style="color: #fff;">Robotics Workshop</h3>
+            <p class="card-text" style="color: #e6e6f7;">The Robotics Workshop is a hands-on introduction to the fascinating world of robotics, guiding participants through the basics of designing, building, and programming simple robots. Attendees will explore essential concepts such as sensors, actuators, electronic components, and basic coding, all through engaging practical activities. By the end of the workshop, participants will have a solid foundation in robotics and an understanding of how these technologies are shaping the future.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Embedded Systems Workshop -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow" style="background: rgba(34,20,74,0.95); border-radius: 16px; border: none;">
+          <div style="position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; border-radius: 16px 16px 0 0;">
+            <img src="assets/img/workshops/embedded.jpg" alt="Embedded Systems Workshop" class="card-img-top" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" style="color: #fff;">Embedded Systems Workshop</h3>
+            <p class="card-text" style="color: #e6e6f7;">The Embedded Systems Workshop provides a hands-on introduction to the fundamentals of embedded technology, focusing on designing and programming smart electronic devices. Participants will discover how embedded systems power everyday gadgets, explore essential concepts like microcontrollers, sensors, and basic coding, and learn how to interface hardware and software for functional projects. By the end of the workshop, attendees will understand the potential of embedded systems in applications ranging from smart homes to industry, gaining foundational skills for building intelligent, automated solutions in the modern world.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Workshops Section -->
+
+  </main>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Enhanced horizontal scroll functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const highlightsScroll = document.querySelector('.highlights-scroll');
+
+      if (highlightsScroll) {
+        // Enable horizontal scrolling with mouse wheel
+        highlightsScroll.addEventListener('wheel', function(e) {
+          if (e.deltaY !== 0) {
+            e.preventDefault();
+            highlightsScroll.scrollLeft += e.deltaY;
+          }
+        });
+
+        // Touch/swipe support for mobile
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        highlightsScroll.addEventListener('mousedown', function(e) {
+          isDown = true;
+          highlightsScroll.classList.add('active');
+          startX = e.pageX - highlightsScroll.offsetLeft;
+          scrollLeft = highlightsScroll.scrollLeft;
+        });
+
+        highlightsScroll.addEventListener('mouseleave', function() {
+          isDown = false;
+          highlightsScroll.classList.remove('active');
+        });
+
+        highlightsScroll.addEventListener('mouseup', function() {
+          isDown = false;
+          highlightsScroll.classList.remove('active');
+        });
+
+        highlightsScroll.addEventListener('mousemove', function(e) {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - highlightsScroll.offsetLeft;
+          const walk = (x - startX) * 2;
+          highlightsScroll.scrollLeft = scrollLeft - walk;
+        });
+      }
+    });
+  </script>
+
+  <!-- Countdown Timer Script -->
+  <script>
+  // Countdown Timer Script
+  document.addEventListener('DOMContentLoaded', function () {
+    function updateCountdown() {
+      // Set event date (YYYY-MM-DD)
+      const eventDate = new Date('2025-09-12T00:00:00');
+      const now = new Date();
+      let diff = eventDate - now;
+
+      if (diff < 0) diff = 0;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('count-days').textContent = days;
+      document.getElementById('count-hours').textContent = hours;
+      document.getElementById('count-minutes').textContent = minutes;
+      document.getElementById('count-seconds').textContent = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  });
+</script>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="footer bg-dark text-light pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row gy-4 justify-content-between align-items-center">
+        <div class="col-lg-4 col-md-6 mb-3 mb-lg-0 text-center text-lg-start">
+          <a href="index.html" class="footer-logo d-inline-flex align-items-center mb-2">
+            <img src="assets/img/20.png" alt="FrizBee'25 Logo" style="height: 48px; width: auto; margin-right: 10px;">
+          </a>
+          <p class="mb-1">MES College of Engineering, Kuttipuram</p>
+          <p class="mb-0 small">© 2025 FrizBee. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-4 col-md-12 text-center text-lg-end">
+          <h5 class="mb-3">Contact</h5>
+          <p class="mb-1"><i class="bi bi-envelope me-2"></i>frizbee@mesce.ac.in</p>
+          <p class="mb-1"><i class="bi bi-telephone me-2"></i>+91 98765 43210</p>
+          <div class="footer-social mt-2">
+            <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 border-secondary">
+    </div>
+  </footer>
+
+</body>
+
+</html>
